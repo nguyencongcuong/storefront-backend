@@ -3,7 +3,7 @@
 This note is dedicated to reviewer from Udacity.
 
 ## Prerequisites
-1. Stable NodeJS
+1. Stable NodeJS v16.x
 2. Postgres Server & pgAdmin4 installed: (https://www.postgresql.org/download/)
 3. Project repository:  
 4. [OPTIONAL] Postman (https://www.postman.com/downloads/)
