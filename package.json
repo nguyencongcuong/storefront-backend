@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "npm run clean && db-migrate up && nodemon ./src/index.ts",
+    "start": "npm run clean && db-migrate down --count 3 && db-migrate up && nodemon ./src/index.ts",
     "build": "npm run clean && npx tsc",
     "clean": "rimraf dist/",
     "test": "db-migrate down --count 3 && db-migrate up && npm run build && npx jasmine && db-migrate down --count 3",

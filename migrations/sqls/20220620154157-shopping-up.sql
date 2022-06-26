@@ -1,9 +1,10 @@
 CREATE TABLE products
 (
-	id       SERIAL PRIMARY KEY,
-	name     VARCHAR,
-	price    integer,
-	category VARCHAR
+	id        SERIAL PRIMARY KEY,
+	name      VARCHAR,
+	price     integer,
+	category  VARCHAR,
+	inventory FLOAT
 );
 
 CREATE TABLE users
@@ -23,15 +24,15 @@ CREATE TABLE orders (
   status text
 );
 
-INSERT INTO products (name, price, category) VALUES ('Apple', 500,  'Fruit');
-INSERT INTO products (name, price, category) VALUES ('Peach', 600, 'Fruit');
-INSERT INTO products (name, price, category) VALUES ('Coconut', 200, 'Fruit');
-INSERT INTO products (name, price, category) VALUES ('Yellow Pepper', 150, 'Vegetable');
-INSERT INTO products (name, price, category) VALUES ('Mushroom', 20, 'Vegetable');
-INSERT INTO products (name, price, category) VALUES ('Carrot', 70, 'Vegetable');
-INSERT INTO products (name, price, category) VALUES ('Pork', 90, 'Meat');
-INSERT INTO products (name, price, category) VALUES ('Chicken', 120, 'Meat');
-INSERT INTO products (name, price, category) VALUES ('Beef', 540, 'Meat');
+INSERT INTO products (name, price, category, inventory) VALUES ('Apple', 500,  'Fruit', 70000);
+INSERT INTO products (name, price, category, inventory) VALUES ('Peach', 600, 'Fruit', 120000);
+INSERT INTO products (name, price, category, inventory) VALUES ('Coconut', 200, 'Fruit', 40000);
+INSERT INTO products (name, price, category, inventory) VALUES ('Yellow Pepper', 150, 'Vegetable', 869238);
+INSERT INTO products (name, price, category, inventory) VALUES ('Mushroom', 20, 'Vegetable', 98321);
+INSERT INTO products (name, price, category, inventory) VALUES ('Carrot', 70, 'Vegetable', 32987);
+INSERT INTO products (name, price, category, inventory) VALUES ('Pork', 90, 'Meat', 129812);
+INSERT INTO products (name, price, category, inventory) VALUES ('Chicken', 120, 'Meat', 1278921);
+INSERT INTO products (name, price, category, inventory) VALUES ('Beef', 540, 'Meat', 129871);
 
 INSERT INTO users (username, firstName, lastName, password) VALUES ('cuongnc.fe', 'Cuong', 'Nguyen', '$2b$10$gNA7mS4cx4QHL4Nqohl8Eub9nQMMA7sVmIJ/42jzVHhQHhxXhf8LC');
 INSERT INTO users (username, firstName, lastName, password) VALUES ('anhnln', 'Anh', 'Nguyen', '$2b$10$YnsUB3Db4JWzYRhlV/wRsOv/cBqFQKwmgATv0oKsyX2BTABXlk7du');

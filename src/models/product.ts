@@ -5,6 +5,7 @@ export type Product = {
 	name: string;
 	price: number;
 	category: string;
+	inventory: number;
 };
 
 export class ProductModel {
