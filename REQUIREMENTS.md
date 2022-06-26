@@ -26,6 +26,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 - name
 - price
 - category
+- inventory
 
 #### User
 - id
@@ -36,8 +37,12 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Orders
 - id
-- id of each product in the order
-- quantity of each product in the order
 - user_id
 - status of order (active or complete)
+- date
 
+#### Order Details
+- id
+- order id
+- product id
+- quantity
