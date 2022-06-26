@@ -200,13 +200,7 @@
 					"name": "createUser",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBhc3N3b3JkIjoiJDJiJDEwJGdOQTdtUzRjeDRRSEw0TnFvaGw4RXViOW5RTU1BN3NWbUlKLzQyanpWSGhRSGh4WGhmOExDIn0sImlhdCI6MTY1NjAwOTMxNH0.3UoV1wPrKmLM1QmeSM5_IHvQbw0-9qLz8JQYkBrK-co",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"username\": \"tobokk4ii5\",\r\n    \"firstName\": \"Cuong\",\r\n    \"lastName\": \"Nguyen\",\r\n    \"password\": \"tobokkipassword\"\r\n}",

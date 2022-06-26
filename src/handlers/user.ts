@@ -61,7 +61,7 @@ const authenticate = async (req: Request, res: Response) => {
 const userRoutes = (app: express.Application) => {
   app.get("/users", Middleware.verifyAuthToken, getAllUsers);
   app.get("/user/:id", Middleware.verifyAuthToken, getUserByID);
-  app.post("/user", Middleware.verifyAuthToken, createUser);
+  app.post("/user", createUser);
   app.post("/user/auth", authenticate);
 };
 

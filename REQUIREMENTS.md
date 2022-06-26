@@ -13,7 +13,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 #### Users
 - Get all users [token required]: **/users**
 - Get user by ID (args: user id) [token required]: **/user/:id**
-- Create user (args: user name, firs name, last name, password) [token required]: /user
+- Create user (args: username, first name, last name, password): /user
 - Authenticate a user (args: user name, password): /user/auth
 - 
 #### Orders
