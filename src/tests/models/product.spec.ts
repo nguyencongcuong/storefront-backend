@@ -128,10 +128,11 @@ describe("getProductsByCategory", () => {
 });
 
 describe("deleteProductByID", () => {
-  it("should delete product with id = 1", async () => {
+  it("should delete product with id = 4", async () => {
     // Arrange
+    const productID = '4'
     // Act
-    const deletedProduct = await productModel.deleteProductByID("5");
+    const deletedProduct = await productModel.deleteProductByID(productID);
     const newAllProducts = await productModel.getAllProducts();
     const found = newAllProducts?.find(
       (item) => item.id === deletedProduct?.id
