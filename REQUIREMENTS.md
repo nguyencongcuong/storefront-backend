@@ -22,27 +22,27 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Data Shapes
 #### Product
-- id
-- name
-- price
-- category
-- inventory
+id          SERIAL PRIMARY KEY
+name        VARCHAR
+price       INTEGER
+category    VARCHAR
+inventory   float
 
 #### User
-- id
-- username
-- firstName
-- lastName
-- password
+id          SERIAL PRIMARY KEY
+username    VARCHAR
+firstName   VARCHAR
+lastName    VARCHAR
+password    VARCHAR
 
 #### Orders
-- id
-- user_id
-- status of order (active or complete)
-- date
+id          SERIAL PRIMARY KEY
+user_id     bigint REFERENCES users (id) 
+status      text
+date        text
 
 #### Order Details
-- id
-- order id
-- product id
-- quantity
+id          SERIAL PRIMARY KEY
+order_id    bigint REFERENCES orders (id)
+product_id  bigint REFERENCES product (id)
+quantity    float
