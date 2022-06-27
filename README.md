@@ -32,4 +32,15 @@ Postman's API collections & environments can be found at: `./postman`
 - Collections: `storefront-backend.postman_collection.json`
 - Environments: `localhost-3000.postman_environment.json`
 
+## Environment Variables (.env)
+- POSTGRES_HOST=localhost
+- POSTGRES_DB=shopping
+- POSTGRES_DB_TEST=shopping_test
+- POSTGRES_USER=shopping_user
+- POSTGRES_PASSWORD=password123
+- ENV=dev
+- SALT=10
+- PEPPER=nguyencongcuong
+- SECRET_JWT_TOKEN_KEY=udacity
+
 Thank you for giving me your evaluation on this project.
