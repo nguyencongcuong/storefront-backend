@@ -1,15 +1,13 @@
 # STOREFRONT BACKEND | GUIDES
-
 This note is dedicated to reviewer from Udacity.
 
 ## Prerequisites
 1. Stable NodeJS v16.x
-2. Postgres Server & pgAdmin4 installed: (https://www.postgresql.org/download/)
-3. Project repository:  
+2. Postgres Server & pgAdmin4 installed (https://www.postgresql.org/download)
+3. Project repository (https://github.com/nguyencongcuong/storefront-backend.git)
 4. [OPTIONAL] Postman (https://www.postman.com/downloads/)
 
 ## Setup & Connect to the Database
-
 - Open Command Prompt
 - Switch to postgres terminal: `psql -U postgres postgres`
 - Create user and database with the following commands:
@@ -25,11 +23,13 @@ This note is dedicated to reviewer from Udacity.
 - Start API: `npm start`. This command will run the database migration on 'shopping' database and start the server.
 - Test API: `npm run test`. This command will run the database migration on 'shopping_test' database.
 
-## API Port: 3000
+## Ports: 
+- Server (localhost): 3000
+- Database: 5432
 
 ## Use Postman to test API
-- Import APIs from: `storefront-backend.postman_collection.json`
-- Import environment from: `localhost-3000.postman_environment.json`
-- These 2 files can be found in project repo with the path: ./postman
+Postman's API collections & environments can be found at: `./postman` 
+- Collections: `storefront-backend.postman_collection.json`
+- Environments: `localhost-3000.postman_environment.json`
 
 Thank you for giving me your evaluation on this project.
