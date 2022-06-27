@@ -8,6 +8,7 @@ This note is dedicated to reviewer from Udacity.
 4. [OPTIONAL] Postman (https://www.postman.com/downloads/)
 
 ## Setup & Connect to the Database
+### Setup
 - Open Command Prompt
 - Switch to postgres terminal: `psql -U postgres postgres`
 - Create user and database with the following commands:
@@ -19,7 +20,11 @@ This note is dedicated to reviewer from Udacity.
   - `\c shopping_test`
   - `GRANT ALL PRIVILEGES ON DATABASE shopping_test TO shopping_user;`
 - Clone project from GitHub
-- From project root folder, install packages: `npm install`
+- From project root folder, install packages: `npm install`.
+
+Now you're done with the setup step.
+
+### Connect to the database
 - Start API: `npm start`. This command will run the database migration on 'shopping' database and start the server.
 - Test API: `npm run test`. This command will run the database migration on 'shopping_test' database.
 

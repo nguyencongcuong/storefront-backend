@@ -4,10 +4,12 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "npm run clean && db-migrate down --count 4 && db-migrate up && nodemon ./src/index.ts",
+    "start": "npm run clean && nodemon ./src/index.ts",
     "build": "npm run clean && npx tsc",
-    "clean": "rimraf dist/",
+    "db-migrate-up": "db-migrate up && db-migrate up -e test",
+    "db-migrate-down-test": "db-migrate down --count 4 -e test",
     "test": "set ENV=test&& db-migrate down --count 4 -e test && db-migrate up -e test && npm run build && npx jasmine && db-migrate down --count 4 -e test",
+    "clean": "rimraf dist/",
     "eslint": "npx eslint src/* --ext .ts",
     "prettier": "npx prettier --write src/**/*.ts"
   },
