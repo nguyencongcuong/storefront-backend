@@ -15,11 +15,15 @@ This note is dedicated to reviewer from Udacity.
 - Create user and database with the following commands:
   - `CREATE USER shopping_user WITH PASSWORD 'password123';`
   - `CREATE DATABASE shopping;`
+  - `CREATE DATABASE shopping_test;`
   - `\c shopping`
   - `GRANT ALL PRIVILEGES ON DATABASE shopping TO shopping_user;`
+  - `\c shopping_test`
+  - `GRANT ALL PRIVILEGES ON DATABASE shopping_test TO shopping_user;`
 - Clone project from GitHub
 - From project root folder, install packages: `npm install`
-- Start the API: `npm start`. This command will run the database migration and start the server.
+- Start API: `npm start`. This command will run the database migration on 'shopping' database and start the server.
+- Test API: `npm run test`. This command will run the database migration on 'shopping_test' database.
 
 ## API Port: 3000
 
