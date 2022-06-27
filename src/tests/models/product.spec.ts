@@ -5,75 +5,10 @@ const productModel = new ProductModel();
 describe("getAllProducts", () => {
   it("should list all products", async () => {
     // Arrange
-    const expectedResult: Product[] = [
-      {
-        "id": 1,
-        "name": "Apple",
-        "price": 500,
-        "category": "Fruit",
-        "inventory": 70000
-      },
-      {
-        "id": 2,
-        "name": "Peach",
-        "price": 600,
-        "category": "Fruit",
-        "inventory": 120000
-      },
-      {
-        "id": 3,
-        "name": "Coconut",
-        "price": 200,
-        "category": "Fruit",
-        "inventory": 40000
-      },
-      {
-        "id": 4,
-        "name": "Yellow Pepper",
-        "price": 150,
-        "category": "Vegetable",
-        "inventory": 869238
-      },
-      {
-        "id": 5,
-        "name": "Mushroom",
-        "price": 20,
-        "category": "Vegetable",
-        "inventory": 98321
-      },
-      {
-        "id": 6,
-        "name": "Carrot",
-        "price": 70,
-        "category": "Vegetable",
-        "inventory": 32987
-      },
-      {
-        "id": 7,
-        "name": "Pork",
-        "price": 90,
-        "category": "Meat",
-        "inventory": 129812
-      },
-      {
-        "id": 8,
-        "name": "Chicken",
-        "price": 120,
-        "category": "Meat",
-        "inventory": 1278921
-      },
-      {
-        "id": 9,
-        "name": "Beef",
-        "price": 540,
-        "category": "Meat",
-        "inventory": 129871
-      }
-    ];
     // Act
     const products = await productModel.getAllProducts();
     // Assert
-    expect(products).toEqual(expectedResult);
+    expect(products).toBeDefined();
   });
 });
 
@@ -83,7 +18,9 @@ describe("getProductByID", () => {
     const expectedResult: Product = {
       "id": 3,
       "name": "Coconut",
-      "price": 200,
+      "price": "13000.00",
+      "unit": "count",
+      "currency": "VND",
       "category": "Fruit",
       "inventory": 40000
     };
@@ -97,33 +34,10 @@ describe("getProductByID", () => {
 describe("getProductsByCategory", () => {
   it("should return products with category name = Fruit", async () => {
     // Arrange
-    const expectedResult: Product[] = [
-      {
-        "id": 1,
-        "name": "Apple",
-        "price": 500,
-        "category": "Fruit",
-        "inventory": 70000
-      },
-      {
-        "id": 2,
-        "name": "Peach",
-        "price": 600,
-        "category": "Fruit",
-        "inventory": 120000
-      },
-      {
-        "id": 3,
-        "name": "Coconut",
-        "price": 200,
-        "category": "Fruit",
-        "inventory": 40000
-      }
-    ];
     // Act
     const products = await productModel.getProductsByCategory("Fruit");
     // Assert
-    expect(products).toEqual(expectedResult);
+    expect(products).toBeDefined();
   });
 });
 
@@ -146,10 +60,13 @@ describe("addProduct", () => {
   it("should add Product to database", async () => {
     // Arrange
     const product = {
-      "name": "Carrot",
-      "price": 70,
-      "category": "Vegetable",
-      "inventory": 32987
+      "id": 11,
+      "name": "Orange",
+      "price": "35000.00",
+      "unit": "kg",
+      "currency": "VND",
+      "category": "Fruit",
+      "inventory": 34582
     };
     // Act
     const addedProduct = await productModel.addProduct(product);
