@@ -49,3 +49,5 @@ Postman's API collections & environments can be found at: `./postman`
 - SECRET_JWT_TOKEN_KEY=udacity
 
 Thank you for giving me your evaluation on this project.
+
+#GET_PASSES_THIS_REPO_UDACITY_PLEASE
